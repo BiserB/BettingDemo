@@ -9,7 +9,7 @@ import { BettingEvent, EventType } from '../fetch-data/fetch-data.component';
 export class EventDataService {
 
   
-  externalApiURL = "https://api-football-v1.p.rapidapi.com/v2/events/214226";
+  externalApiURL = "";
 
   apiController: string = 'Data';
   apiEventAction: string = "GetEvents";
@@ -20,8 +20,8 @@ export class EventDataService {
 
   httpOptions = {
     headers: new HttpHeaders({
-      "x-rapidapi-host": "api-football-v1.p.rapidapi.com",
-      "x-rapidapi-key": "7e94de5c9cmsh4e94bd1080bdca0p11ca8cjsn5bb5569d6e86",
+      "x-rapidapi-host": "",
+      "x-rapidapi-key": "",
       "useQueryString": "true"
     })
   }  
