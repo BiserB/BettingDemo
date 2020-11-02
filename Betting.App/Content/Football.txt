@@ -1,0 +1,28 @@
+Arsenal - Watford,2.02,3.80,3.61,2020-06-26T19:00
+Chelsea - Wolves,1.92,3.39,1.49,2020-11-26T19:00
+Burnley - Brighton,2.64,3.37,2.78,2020-11-26T19:00
+Crystal Palace - Tottenham,6.96,4.47,1.49,2020-06-26T18:00
+Everton - Bournemouth,2.36,3.68,2.94,2020-06-26T19:00
+Leicester - Manchester Utd,3.72,3.61,2.04,2020-06-26T21:00
+Manchester City - Norwich,1.04,19.49,41.87,2021-06-10T21:00
+Newcastle - Liverpool,5.65,4.57,1.57,2020-11-10T19:00
+Southampton - Sheffield Utd,1.99,3.62,3.87,2020-11-10T21:00
+West Ham - Aston Villa,2.63,3.56,2.67,2020-06-10T21:00
+Liverpool - Chelsea,1.91,3.79,3.98,2020-06-03T21:00
+Manchester Utd - West Ham,1.26,6.56,11.18,2020-11-03T21:00
+Aston Villa - Arsenal,3.17,3.76,2.20,2020-06-03T19:00
+Watford - Manchester City,9.17,6.14,1.31,2020-11-03T21:00
+Wolves - Crystal Palace,1.45,4.28,8.95,2020-05-22T21:00
+Brighton - Newcastle,2.00,3.54,4.00,2020-05-22T19:00
+Sheffield Utd - Everton,1.99,3.38,4.22,2020-05-22T19:00
+Tottenham - Leicester,2.33,3.39,3.21,2020-05-22T21:00
+Bournemouth - Southampton,2.44,3.78,2.77,2020-05-17T19:00
+Norwich - Burnley,3.26,3.42,2.29,2020-11-17T21:00
+West Ham - Watford,2.48,2.93,3.41,2020-11-17T19:00
+Crystal Palace - Manchester Utd,8.75,5.32,1.36,2020-11-17T19:00
+Southampton - Brighton,2.28,3.41,3.29,2020-05-12T19:00
+Everton - Aston Villa,2.12,3.55,3.55,2020-05-12T21:00
+Leicester - Sheffield Utd,2.15,3.27,3.80,2020-05-12T21:00
+Arsenal - Liverpool,4.55,4.25,1.72,2020-11-12T19:00
+Burnley - Wolves,4.62,3.31,1.94,2020-11-12T21:00
+Manchester City - Bournemouth,1.15,9.07,16.81,2020-05-12T19:00

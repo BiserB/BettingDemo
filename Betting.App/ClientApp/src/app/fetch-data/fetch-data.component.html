@@ -1,20 +1,57 @@
-<h1 id="tableLabel">Weather forecast</h1>
+<div class="row">
+  <div class="col-sm-8">
+    <span class="h3">Odds Portal</span>
+    <span class="h5 ml-2">Betting Odds Monitoring Service</span>
+  </div>
+  <div class="col-sm-2">
+    <button (click)="false">Add new event</button>
+  </div>
+  <div class="col-sm-2">
+    <button (click)="isEditMode = !isEditMode"><span *ngIf="isEditMode">Preview mode</span><span *ngIf="!isEditMode">Edit mode</span></button>
+  </div>
+</div>
 
-<p>This component demonstrates fetching data from the server.</p>
+<p *ngIf="!events || !events.length"><em>Loading...</em></p>
 
-<p *ngIf="!data"><em>Loading...</em></p>
+<div *ngIf="events && events.length">
 
-<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="data">
-  <thead>
-    <tr>
-      <th>Id</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let d of data">
-      <td>{{ d.id }}</td>
-      <td>{{ d.description }}</td>
-    </tr>
-  </tbody>
-</table>
+  <table class='table' aria-labelledby="tableLabel" >
+    <thead>
+      <tr>
+        <th *ngIf="isEditMode">Event Id</th>
+        <th>Event Name</th>
+        <th>Odds for first Team</th>
+        <th>Odds for Draw</th>
+        <th>Odds for second Team</th>
+        <th>Event Start Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngIf="!isEditMode">
+        <tr *ngFor="let e of events; let i = index"
+      [ngClass]="{'bg-aliceblue': i%2!=0, 'bg-honeydew': i%2==0, 'bg-lightsalmon': isPastEvent(e.eventStartDate) }">        
+        <td>{{ e.eventName }}</td>
+        <td>{{ e.oddsForFirstTeam | number : '1.2-2' }}</td>
+        <td>{{ formatOddsForDraw(e.oddsForDraw) }}</td>
+        <td>{{ e.oddsForSecondTeam | number : '1.2-2' }}</td>
+        <td>{{ e.eventStartDate | date:"dd/MM/yy HH:mm"}}</td>
+      </tr>
+      </ng-container>
+      <ng-container *ngIf="isEditMode">
+        <tr *ngFor="let e of events; let i = index">
+        <td>{{ e.eventId }}</td>
+        <td><input [ngModel]="e.eventName" (click)="selectEvent(e.eventId)" (change)="selectedEvent.eventName=$event.target.value"></td>
+        <td><input [ngModel]="e.oddsForFirstTeam" (click)="selectEvent(e.eventId)" (change)="changeOddsFirst($event)" numbersOnly class="input-short"></td>
+        <td><input [ngModel]="e.oddsForDraw" (click)="selectEvent(e.eventId)" (change)="changeOddsDraw($event)" numbersOnly class="input-short"></td>
+        <td><input [ngModel]="e.oddsForSecondTeam" (click)="selectEvent(e.eventId)" (change)="changeOddsSecond($event)" numbersOnly class="input-short"></td>
+        <td><input [ngModel]="e.eventStartDate" (click)="selectEvent(e.eventId)"></td>
+        <td *ngIf="isEditMode"><button (click)="deleteEvent(e.eventId)">Delete</button></td>
+        <td *ngIf="isEditMode"><button (click)="saveEventChanges(e.eventId)">Save</button></td>
+      </tr>
+      </ng-container>    
+    </tbody>
+  </table>
+
+</div>
+
+

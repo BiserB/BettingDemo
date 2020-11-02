@@ -1,0 +1,15 @@
+.bg-aliceblue{
+    background-color: aliceblue;
+}
+
+.bg-honeydew{
+    background-color: honeydew;
+}
+
+.bg-lightsalmon{
+    background-color: lightsalmon;
+}
+
+.input-short{
+    max-width: 50px;
+}

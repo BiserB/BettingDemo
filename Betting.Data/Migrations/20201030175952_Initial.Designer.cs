@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Betting.Data.Migrations
 {
     [DbContext(typeof(BettingDbContext))]
-    [Migration("20201028121127_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20201030175952_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -32,16 +32,16 @@ namespace Betting.Data.Migrations
                     b.Property<DateTime>("EventStartDate")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("EventStatusId")
+                    b.Property<int>("EventTypeId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("EventTypeId")
+                    b.Property<bool>("IsDeleted")
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("Modified")
                         .HasColumnType("TEXT");
 
-                    b.Property<double>("OddsForDraw")
+                    b.Property<double?>("OddsForDraw")
                         .HasColumnType("REAL");
 
                     b.Property<double>("OddsForFirstTeam")
@@ -52,14 +52,12 @@ namespace Betting.Data.Migrations
 
                     b.HasKey("EventId");
 
-                    b.HasIndex("EventStatusId");
-
                     b.HasIndex("EventTypeId");
 
                     b.ToTable("Events");
                 });
 
-            modelBuilder.Entity("Betting.Entities.EventStatus", b =>
+            modelBuilder.Entity("Betting.Entities.EventType", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -74,35 +72,11 @@ namespace Betting.Data.Migrations
                     b.HasIndex("Name")
                         .IsUnique();
 
-                    b.ToTable("EventStatuses");
-                });
-
-            modelBuilder.Entity("Betting.Entities.EventType", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("Description")
-                        .IsUnique();
-
                     b.ToTable("EventTypes");
                 });
 
             modelBuilder.Entity("Betting.Entities.Event", b =>
                 {
-                    b.HasOne("Betting.Entities.EventStatus", "EventStatus")
-                        .WithMany("Events")
-                        .HasForeignKey("EventStatusId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
                     b.HasOne("Betting.Entities.EventType", "EventType")
                         .WithMany("Events")
                         .HasForeignKey("EventTypeId")

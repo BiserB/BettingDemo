@@ -28,6 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Betting.Common\Betting.Common.csproj" />
     <ProjectReference Include="..\Betting.Data\Betting.Data.csproj" />
     <ProjectReference Include="..\Betting.Entities\Betting.Entities.csproj" />
     <ProjectReference Include="..\Betting.Services\Betting.Services.csproj" />

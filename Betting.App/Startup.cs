@@ -1,3 +1,4 @@
+using Betting.App.Infrastructure;
 using Betting.Data;
 using Betting.Services;
 using Microsoft.AspNetCore.Builder;
@@ -40,6 +41,8 @@ namespace Betting.App
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+
+                app.InitialDbSeed();
             }
             else
             {
@@ -67,7 +70,7 @@ namespace Betting.App
                 // see https://go.microsoft.com/fwlink/?linkid=864501
 
                 spa.Options.SourcePath = "ClientApp";
-
+                spa.Options.StartupTimeout = new TimeSpan(0, 5, 0);
                 if (env.IsDevelopment())
                 {
                     spa.UseAngularCliServer(npmScript: "start");

@@ -9,7 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Betting.Entities", "Betting
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Betting.Data", "Betting.Data\Betting.Data.csproj", "{D3BFB8E9-9CC2-42F0-82EA-AFFA54C53C79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Betting.Services", "Betting.Services\Betting.Services.csproj", "{53055BA3-8185-40F0-B4C2-4728241667DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Betting.Services", "Betting.Services\Betting.Services.csproj", "{53055BA3-8185-40F0-B4C2-4728241667DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Betting.Common", "Betting.Common\Betting.Common.csproj", "{A7A51183-99DD-4AA5-A415-C4F7F3D6B3FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Betting.Tests", "Betting.Tests\Betting.Tests.csproj", "{3D248F7C-9CEA-4E6C-AEFA-C5D6A2291C98}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{53055BA3-8185-40F0-B4C2-4728241667DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53055BA3-8185-40F0-B4C2-4728241667DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53055BA3-8185-40F0-B4C2-4728241667DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7A51183-99DD-4AA5-A415-C4F7F3D6B3FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7A51183-99DD-4AA5-A415-C4F7F3D6B3FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7A51183-99DD-4AA5-A415-C4F7F3D6B3FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7A51183-99DD-4AA5-A415-C4F7F3D6B3FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D248F7C-9CEA-4E6C-AEFA-C5D6A2291C98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D248F7C-9CEA-4E6C-AEFA-C5D6A2291C98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D248F7C-9CEA-4E6C-AEFA-C5D6A2291C98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D248F7C-9CEA-4E6C-AEFA-C5D6A2291C98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,18 @@
+<h3>external-api </h3>
+
+<p *ngIf="!eventTypes || !eventTypes.length"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="eventTypes && eventTypes.length">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let d of eventTypes">
+      <td>{{ d.id }}</td>
+      <td>{{ d.name }}</td>
+    </tr>
+  </tbody>
+</table>
